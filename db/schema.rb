@@ -26,10 +26,10 @@ ActiveRecord::Schema.define(version: 20170412212644) do
   create_table "orders", force: :cascade do |t|
     t.string   "total_price"
     t.string   "decimal"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
     t.integer  "user_id"
-    t.integer  "status"
+    t.integer  "status",      default: 1
   end
 
   create_table "products", force: :cascade do |t|
