@@ -6,11 +6,19 @@ class OrderItemsController < ApplicationController
     if @order.save
       session[:order_id] = @order.id
         flash[:notice] = 'Product has been added to your order.'
-      redirect_to products_path
+      respond_to do |format|
+        format.html { redirect_to products_path }
+        format.js { render 'products/create' }
+      end
+      # redirect_to products_path
     else
       flash[:notice] = 'Please add items, quantity must be filled out.'
-      redirect_to products_path
-    end    
+      respond_to do |format|
+        format.html { redirect_to products_path }
+        format.js { render 'products/create' }
+      end
+      # redirect_to products_path
+    end
   end
 
   def update
