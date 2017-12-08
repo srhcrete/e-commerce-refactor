@@ -5,14 +5,14 @@ class OrderItemsController < ApplicationController
     @item = @order.order_items.new(item_params)
     if @order.save
       session[:order_id] = @order.id
-        flash[:notice] = 'Product has been added to your order.'
+        flash[:notice] = 'Added to your order.'
       respond_to do |format|
         format.html { redirect_to products_path }
         format.js { render 'products/create' }
       end
       # redirect_to products_path
     else
-      flash[:notice] = 'Please add items, quantity must be filled out.'
+      flash[:notice] = 'Item quantity must be filled out.'
       respond_to do |format|
         format.html { redirect_to products_path }
         format.js { render 'products/create' }
