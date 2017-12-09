@@ -1,10 +1,8 @@
 # E-Commerce Refactor
 
-Description...
+Description pending...
 
-####Please see the project log [here] (https://github.com/srhcrete/e-commerce-refactor/tree/master/public) for details about recent improvements made to this site.
-
-E-commerce site. Uses `bcrypt` and `materialize`. There's a seed file. Set up your own admin. If you have questions, I'll be in Bali with no email. Ask someone else.
+#### Please see the project log [here](https://github.com/srhcrete/e-commerce-refactor/tree/master/public) for details about recent improvements made to this site.
 
 ## Set Up
 
