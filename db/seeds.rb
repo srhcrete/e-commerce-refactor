@@ -13,13 +13,11 @@ class Seed
   end
 
   def generate_admin
-    User.create(username: "aGuy",
+    User.create( name: "Guy",
             email: "test@gmail.com",
             password: "password",
-            is_female: true,
-            date_of_birth: Date.new,
             admin: true)
-  do
+  end
 end
 
 Seed.begin

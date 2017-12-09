@@ -10,6 +10,7 @@
   <nav>
     <div class="nav-wrapper">
       <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><%= link_to "Admin", new_product_path %></li>
         <li><%= link_to "Cart | Total items:", cart_path %></li>
         <li id="cart_items"><%= cart_items %></li>
         <li><%= link_to "See all products", products_path %></li>
@@ -25,9 +26,11 @@
   </nav>
 
   <body>
-    <% flash.each do |name, msg| %>
+    <div class="flash_notice">
+      <% flash.each do |name, msg| %>
       <%= content_tag :div, msg, id: "flash_#{name}" %>
-    <% end %>
+      <% end %>
+    </div>
     <div class="container">
       <%= yield %>
     </div>
