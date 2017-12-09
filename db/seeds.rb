@@ -21,3 +21,5 @@ class Seed
 end
 
 Seed.begin
+p "Created #{Product.count} products"
+p "Created #{User.count} users"
