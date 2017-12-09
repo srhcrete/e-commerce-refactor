@@ -8,7 +8,7 @@
     <% end %>
   </div>
   <p>Your Total: <span id='total_price'><%= number_to_currency current_order.total_price %></span></p>
-  <p><%= link_to "Finalize order", finalize_path %></p>
+  <p><%= link_to "Check out ", new_charge_path %><i class="fa fa-credit-card" aria-hidden="true"></i></p>
 <% else %>
   <p>Your shopping cart is empty.</p>
 <% end %>
