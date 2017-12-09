@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   post '/sign_in' => 'sessions#create'
   get 'sign_out' => 'sessions#destroy'
 
+  get 'thanks', to: 'charges#thanks', as: 'thanks'
+
   resources :products
   resources :order_items
   resources :charges
