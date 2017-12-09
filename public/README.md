@@ -9,3 +9,4 @@
 * added Stripe for charges.
 * added route to admin and new product page.
 * changed orders total_price column from string to decimal to fix charges.
+* added thanks route to charges.

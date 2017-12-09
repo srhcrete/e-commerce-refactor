@@ -8,14 +8,14 @@ class OrderItemsController < ApplicationController
         flash[:notice] = 'Added to your order.'
       respond_to do |format|
         format.html { redirect_to products_path }
-        format.js { render 'products/create' }
+        format.js { render 'products/index' }
       end
       # redirect_to products_path
     else
       flash[:notice] = 'Item quantity must be filled out.'
       respond_to do |format|
         format.html { redirect_to products_path }
-        format.js { render 'products/create' }
+        format.js { render 'products/index' }
       end
       # redirect_to products_path
     end
