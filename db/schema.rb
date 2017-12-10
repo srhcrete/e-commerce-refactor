@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20171209220618) do
     t.datetime "updated_at",                                      null: false
     t.integer  "user_id"
     t.integer  "status",                              default: 1
-    t.decimal  "total_price", precision: 4, scale: 2
+    t.decimal  "total_price", precision: 5, scale: 2
   end
 
   create_table "products", force: :cascade do |t|
