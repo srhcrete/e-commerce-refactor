@@ -15,8 +15,6 @@
         <li><%= link_to "See all products", products_path %></li>
         <% if current_user %>
           <li><%= current_user.email %></li>
-          <img><%= image_tag @user.avatar.url %></img>
-          <img><%= image_tag @user.avatar.url(:medium) %></img>
           <img><%= image_tag @user.avatar.url(:thumb) %></img>
           <li><%= link_to "Sign out", '/sign_out' %></li>
         <% else %>
