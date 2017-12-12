@@ -15,6 +15,7 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+public/system/products/photos
 
 #Ignore environment variables
 .env

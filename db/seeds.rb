@@ -4,6 +4,7 @@ class Seed
     seed = Seed.new
     seed.generate_products
     seed.generate_admin
+    seed.destroy_seeds
   end
 
   def generate_products
@@ -13,10 +14,18 @@ class Seed
   end
 
   def generate_admin
-    User.create( name: "Guy",
+    User.create(
+            name: "Guy",
             email: "test@gmail.com",
             password: "password",
-            admin: true)
+            avatar: URI.parse(Faker::LoremPixel.image),
+            admin: true
+          )
+  end
+
+  def destroy_seeds
+    User.destroy_all
+    Product.destroy_all
   end
 end
 
