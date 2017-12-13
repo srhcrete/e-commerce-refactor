@@ -2,9 +2,9 @@ class Seed
 
   def self.begin
     seed = Seed.new
+    seed.destroy_seeds
     seed.generate_products
     seed.generate_admin
-    seed.destroy_seeds
   end
 
   def generate_products
