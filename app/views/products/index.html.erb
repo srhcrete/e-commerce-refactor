@@ -14,6 +14,13 @@
           <%= f.hidden_field :product_id, value: product.id %>
           <%= f.number_field :quantity, placeholder: "Please enter quantity" %>
           <span class="waves-effect waves-light btn"><%= f.submit "Add to cart" %></span>
+          <% if current_user && current_user.admin %>
+            <span>
+              <%= link_to "Edit", edit_product_path(product) %> |
+              <%= link_to "Delete", @product, method: :delete, data: {confirm: "Are you sure?" } %>
+
+            </span>
+          <% end %>
         <% end %>
     </div>
     <% end %>

@@ -1,0 +1,11 @@
+<%= render "layouts/errors", :object => @product %>
+
+<div class="card">
+  <%= form_for @product do |f| %>
+    Name: <%= f.text_field :name %>
+    Description: <%= f.text_field :description %>
+    Price: <%= f.number_field :price %>
+    Photo: <%= f.file_field :photo %>
+    <%= f.submit "Submit" %>
+  <% end %>
+</div>
