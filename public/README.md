@@ -11,4 +11,5 @@
 * changed orders total_price column from string to decimal to fix charges.
 * added thanks route to charges.
 * added Paperclip to handle image uploading.
-* added avatar column to users table.
+* added avatar to users sign in and and upload for new users.
+* add photo to products details page and upload for new products.
