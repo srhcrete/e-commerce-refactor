@@ -3,7 +3,7 @@
 <div class="row">
   <div class="section">
     <% @products.each do |product| %>
-    <div class="col s4">
+    <div class="col m4 s6 sample">
       <h4><%= product.name %></h4>
       <img><%= image_tag product.photo.url(:medium) %></img>
       <p><%= product.description %></p>

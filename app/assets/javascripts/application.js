@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require matchHeight 
 //= require turbolinks
 //= require_tree .
 //= require materialize-sprockets
@@ -20,4 +21,5 @@ $('document').ready(function() {
   setTimeout(function() {
     $('.flash_notice').slideUp();
   }, 3000);
+    $('.sample').matchHeight();
 });
