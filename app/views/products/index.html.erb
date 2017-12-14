@@ -1,12 +1,14 @@
 <h3>Products</h3>
 
 <div class="row">
+
   <div class="section">
     <% @products.each do |product| %>
     <div class="col m4 s6 sample">
       <h4><%= product.name %></h4>
       <img><%= image_tag product.photo.url(:medium) %></img>
-      <p><%= product.description %></p>
+      <p><%= link_to 'Details', product, remote: true %></p>
+      <p class="hidden" id="item_details<%= product.id %>"><%= product.description %></p>
       <p><%= number_to_currency product.price %></p>
         <%= form_for(@order_item, remote: true) do |f| %>
           <%= f.hidden_field :product_id, value: product.id %>
@@ -16,4 +18,5 @@
     </div>
     <% end %>
   </div>
+
 </div>
