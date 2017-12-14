@@ -13,3 +13,4 @@
 * added Paperclip to handle image uploading.
 * added avatar to users sign in and and upload for new users.
 * add photo to products details page and upload for new products.
+* show product details with ajax and jquery.
