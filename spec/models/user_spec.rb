@@ -6,3 +6,7 @@ describe User, 'validation' do
   it { should validate_presence_of :name }
   it { should validate_presence_of :password }
 end
+
+describe User, 'association' do
+  it { should have_many :orders }
+end
