@@ -4,6 +4,9 @@ class Order < ApplicationRecord
 
   before_save :update_total
 
+  validates :total_price, :presence => true
+  validates :status, :presence => true
+
   def calculate_total
     self.order_items.collect { |item| item.product.price * item.quantity }.sum
   end
