@@ -1,0 +1,32 @@
+<h3>Products</h3>
+
+<div class="row">
+
+  <div class="section">
+    <% @products.each do |product| %>
+    <div class="col m4 s6 sample">
+      <h4><%= product.name %></h4>
+      <img><%= image_tag product.photo.url(:medium) %></img>
+      <p><%= link_to 'Details', product, remote: true %></p>
+      <p class="hidden" id="item_details<%= product.id %>"><%= product.description %></p>
+      <p><%= number_to_currency product.price %></p>
+        <%= form_for(@order_item, remote: true) do |f| %>
+          <%= f.hidden_field :product_id, value: product.id %>
+          <%= f.number_field :quantity, placeholder: "Please enter quantity" %>
+          <span class="waves-effect waves-light btn"><%= f.submit "Add to cart" %></span>
+          <% if current_user && current_user.admin %>
+            <span>
+              <%= link_to "Edit", edit_product_path(product) %> |
+              <%= link_to "Delete", product_path(product),
+                                       :data => {:confirm => "Are you sure?",
+                                                      :method => "delete"} %>
+
+
+            </span>
+          <% end %>
+        <% end %>
+    </div>
+    <% end %>
+  </div>
+
+</div>

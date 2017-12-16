@@ -10,7 +10,7 @@
   <nav>
     <div class="nav-wrapper">
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <% if current_user.admin %>
+        <% if current_user && current_user.admin %>
           <li><%= link_to "Add Product", new_product_path %></li>
         <% end %>
         <li id="cart-items"><%= link_to "Cart | Total items: #{ cart_items }", cart_path %></li>
